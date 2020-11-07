@@ -1,0 +1,247 @@
+/* 
+p{           //formato para "etiquetas"
+    propiedad: algo; 
+} 
+.container{     //para las "clases/categorias" una o varias, puede usarse en varias o una etiqueta
+    propiedad: algo;
+}
+#incio{         //para configurar un solo "id"
+    propiedad: algo;
+}
+*{       //asterisco afecta a "TODOS" los archivos de html
+    propiedad: algo;
+}
+*/
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: "Roboto"; /* tipgrafia, tipo de letra*/
+	font-size: 13px;
+}
+a {
+	display: inline-block;
+}
+p {
+	color: black;
+}
+header {
+	padding: 15px 0; /*espacio que ocupara*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background-color: white;
+	width: 100%;
+}
+.boton {
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 30px;
+	border: none;
+}
+header .container {
+	display: flex; /*aprovecha el espacio del elemento*/
+	justify-content: space-between;
+	align-items: center;
+}
+header .container .logo {
+	width: 100px;
+}
+header .container nav a {
+	color: red;
+	text-decoration: none;
+	margin: 0 15px; /* los separa */
+}
+.container {
+	width: 1140px;
+	margin: 0px auto; /*el primero es el de arriba, segundo derecha, tercero abajo, cuarto izq, o bien, primero es arriba y abajo, segundo derecha e izq */
+	padding: 0 15px;
+	position: relative;
+}
+.container-fluid {
+	width: 100%;
+	padding: 0 15px;
+	position: relative;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.col {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.col-33 {
+	width: 33%;
+}
+.col-41 {
+	width: 41.66%;
+}
+.empujar-50 {
+	margin-left: 50%;
+}
+.empujar-58 {
+	margin-left: 58.33%;
+}
+.empujar-66 {
+	margin-left: 66.66%;
+}
+.empujar0 {
+	margin-left: 0;
+}
+#inicio {
+	position: relative;
+}
+#inicio img {
+	width: 100%;
+	display: block;
+}
+#inicio .bloque-inicio {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	width: 400px;
+	text-align: center;
+	margin-left: -200px;
+}
+#inicio .bloque-inicio h1 {
+	color: white;
+	font-size: 35px;
+}
+#inicio .bloque-inicio p {
+	color: white;
+	font-size: 16px;
+}
+.boton.boton-rojo {
+	color: white;
+	background-color: red;
+	font-size: 20px;
+	font-weight: bold;
+}
+.boton.boton-blanco {
+	color: red;
+	background-color: white;
+	font-size: 16px;
+	font-weight: bold;
+	border: solid red;
+}
+.boton.boton-negro {
+	color: white;
+	background-color: black;
+	font-size: 20px;
+	font-weight: bold;
+}
+.boton.boton-negro:hover {
+	color: black;
+	background-color: white;
+}
+.seccion {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.cuadrado-perfecto {
+	width: 100%;
+	padding-bottom: 100%;
+	position: relative;
+}
+.cuadrado-perfecto img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#nosotros {
+	background-image: url(./img/latas.jpg);
+	background-size: cover;
+}
+#nosotros p {
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	/*margin: 0px; todos los <p> tiene margen por default, se lo podemos quitar */
+}
+#servicios .bloque-servicio {
+	border: 1px solid grey;
+}
+
+.bloque-img-servicio img {
+	width: 100%;
+}
+.bloque-img-servicio.cuadrado-perfecto {
+	padding-bottom: 56.25%;
+}
+.bloque-contenido-servicio {
+	padding: 15px;
+}
+.bloque-contenido-servicio p {
+	margin-top: 0px;
+	font-size: 25px;
+}
+#galeria h4 {
+	padding-right: 15px;
+	padding-left: 15px;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	color: white;
+	font-size: 18px;
+	width: 100%;
+}
+#galeria img {
+	filter: grayscale(1);
+}
+#galeria .cuadrado-perfecto:hover img {
+	filter: grayscale(0);
+}
+#galeria .cuadrado-perfecto:hover h4 {
+	display: none;
+}
+#contactenos {
+	position: relative;
+}
+#contactenos iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: grayscale(1);
+}
+#contactenos form {
+	padding: 60px;
+	background-color: red;
+}
+#contactenos form {
+	padding: 60px;
+	background-color: red;
+}
+#contactenos form .form-block {
+	width: 100%;
+	margin-bottom: 15px;
+}
+#contactenos form .form-block .form-control {
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+#contactenos form .form-block textarea {
+	display: block;
+	height: 100px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+#contactenos form .form-block.bloque-ultimo {
+	margin-bottom: 0;
+}
